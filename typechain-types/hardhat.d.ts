@@ -13,15 +13,33 @@ import * as Contracts from ".";
 declare module "hardhat/types/runtime" {
   interface HardhatEthersHelpers extends HardhatEthersHelpersBase {
     getContractFactory(
-      name: "Greeter",
+      name: "OldWavePortal",
       signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.Greeter__factory>;
+    ): Promise<Contracts.OldWavePortal__factory>;
+    getContractFactory(
+      name: "WavePortal",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.WavePortal__factory>;
+    getContractFactory(
+      name: "WavePortal",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.WavePortal__factory>;
 
     getContractAt(
-      name: "Greeter",
+      name: "OldWavePortal",
       address: string,
       signer?: ethers.Signer
-    ): Promise<Contracts.Greeter>;
+    ): Promise<Contracts.OldWavePortal>;
+    getContractAt(
+      name: "WavePortal",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.WavePortal>;
+    getContractAt(
+      name: "WavePortal",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.WavePortal>;
 
     // default types
     getContractFactory(
